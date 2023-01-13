@@ -1,0 +1,90 @@
+1.	Write a program to print the following pattern
+Sample Input 
+5
+
+Sample Output
+
+A								A
+A	B						B	A
+A	B	C				C	B	A
+A	B	C	D		D	C	B	A
+A	B	C	D	E	D	C	B	A
+
+								
+import java.util.*;
+
+public class pro19 {
+    public static void main(String args[]) {
+        int len = new java.util.Scanner(System.in).nextInt();
+        char s1[] = new char[len];
+        for (int i = 0; i < len; i++)
+            s1[i] = (char) ('A' + i);
+        int count = 1;
+        String inter = new String("A");
+        for (int i = 1; i <= len; i++) {
+            char s2[] = new char[count];
+            if (i == len)
+                System.out.printf("%-" + len + "." + (i) + "s" + "%s" + "\n", new String(s1), inter);
+            else {
+                for (int j = 0; j < i; j++)
+                    s2[i - j - 1] = (char) ('A' + j);
+                inter = new String(s2);
+                System.out.printf("%-" + len + "." + i + "s" + " ".repeat(len - i - 1) + "%s" + "\n", new String(s1),
+                        inter);
+            }
+            if (i != len - 1)
+                count++;
+        }
+    }
+}
+
+/*
+ * output:
+ * 5
+ * A        A
+ * AB      BA
+ * ABC    CBA
+ * ABCD  DCBA
+ * ABCDEDCBA
+ */
+
+
+2.	Write a program to print the following pattern
+Sample Input 
+5
+
+Sample Output
+
+A								A
+	B						B	
+		C				C		
+			D		D			
+				E				
+
+import java.util.Scanner;
+
+public class pro20 {
+    public static void main(String args[]) {
+        int len = new java.util.Scanner(System.in).nextInt();
+        char c[] = new char[len];
+        for (int i = 0; i < len; i++)
+            c[i] = (char) ('A' + i);
+        int index = 0;
+        for (int i = 0; i < len; i++) {
+            if (i == len - 1)
+                System.out.println(" ".repeat(i) + c[index]);
+            else
+                System.out.println(" ".repeat(i) + c[index] + " ".repeat((len - i) * 2 - 3) + c[index++]);
+        }
+    }
+}
+/*
+ * output:
+ 5
+A       A
+ B     B
+  C   C
+   D D
+    E
+ */
+
