@@ -1,0 +1,51 @@
+Problem 1:
+Consider the following series: 1, 1, 2, 3, 4, 9, 8, 27, 16, 81, 32, 243, 64, 729, 128, 2187 …
+This series is a mixture of 2 series – all the odd terms in this series form a geometric series and all the even terms form yet another geometric series. Write a program to find the Nth term in the series.
+The value N in a positive integer that should be read from STDIN. The Nth term that is calculated by the program should be written to STDOUT. Other than value of n th term,no other character / string or message should be written to STDOUT. For example , if N=16, the 16th term in the series is 2187, so only value 2187 should be printed to STDOUT.
+You can assume that N will not exceed 30. 
+//Program to print Nth term of the series
+
+import java.lang.Math;
+
+public class pro21 {
+
+    public static void main(String[] args) {
+        int n = new java.util.Scanner(System.in).nextInt();
+        if (n > 0) {
+            if (n % 2 != 0)
+                System.out.println((int) Math.pow(2, n / 2));
+            else
+                System.out.println((int) Math.pow(3, n / 2 - 1));
+        }
+    }
+
+}
+/*
+ * output:
+ * 16
+ * 2187
+ */
+
+ 
+Problem 2:
+Consider the below series :
+0, 0, 2, 1, 4, 2, 6, 3, 8, 4, 10, 5, 12, 6, 14, 7, 16, 8
+This series is a mixture of 2 series all the odd terms in this series form even numbers in ascending order and every even terms is derived from the previous  term using the formula (x/2)
+Write a program to find the nth term in this series.
+The value n in a positive integer that should be read from STDIN the nth term that is calculated by the program should be written to STDOUT. Other than the value of the nth term no other characters /strings or message should be written to STDOUT.
+For example if n=10,the 10 th term in the series is to be derived from the 9th term in the series. The 9th term is 8 so the 10th term is (8/2)=4. Only the value 4 should be printed to STDOUT.
+You can assume that the n will not exceed 20,000.
+
+public class pro22 {
+
+    public static void main(String[] args) {
+        int n = new java.util.Scanner(System.in).nextInt();
+        if (n > 0) {
+            if (n % 2 == 0)
+                System.out.println((n - 2) / 2);
+            else
+                System.out.println(n - 1);
+        }
+    }
+}
+
