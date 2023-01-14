@@ -1,0 +1,81 @@
+str1.equals(str2) ===  comparing data in variables
+ str1 == str2   === comparing address of two variables
+--------------
+str.compareTo(str1)
+ compares 2 strings
+ANS IN -VE FIRST STR IS SMALLER THAN SECOND ONE 
+str.compareTo(str)
+gives 0 as answer!
+----------------------------------
+import java.util.Arrays;
+
+public class demkoo {
+	public static void main (String [] args) {
+		String[] namelist = {"pow","zow","cow","tow","bow","mow"};
+		Arrays.sort(namelist);
+		int lb = 0, ub = namelist.length-1;
+		String searchName = new java.util.Scanner(System.in).nextLine();
+		while(ub>=lb) {
+			int middle = (lb +ub)/ 2;
+			if (namelist[middle].equals(searchName)) {
+				System.out.println("found @"+(middle+1));
+				return ;
+				
+			}
+			else if(namelist[middle].compareTo(searchName)>0)
+				ub = middle - 1;
+			else
+				lb = middle + 1;
+		}
+		System.out.println("Not Found");
+		
+	}
+
+}
+--------------------------------------------
+import java.util.Scanner;
+public class dynamic{
+	public static void main(String [] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for(int i =0;i<=n;i++) {
+			String[] namelist = new String[n];
+			namelist[i] = sc.nextLine(); 
+		}
+	}
+}
+--------------------------------------------
+public class dynamic{
+public static void main(String [] args) {
+	String[] namelist = {"arjun","rama","kiran","shiva","pratheek","priya"};
+	for (int i =0;i<namelist.length;i++)
+		for (int j = i+1;j<namelist.length;j++ )
+			if (namelist[i].compareTo(namelist[j])>0) {
+				String temp = namelist[i];
+				namelist[j] = namelist[j];
+				namelist[j] = temp;
+				}
+for(int i=0;i<namelist.length;i++)
+	System.out.println(namelist[i].toUpperCase());
+}
+}
+------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
