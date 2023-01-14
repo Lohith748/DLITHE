@@ -1,0 +1,95 @@
+
+
+public class demo {
+public static void main(String [] args) {
+	String str = new java.util.Scanner(System.in).nextLine();
+	int len =str.length();
+	for(int i =1;i<=len; i++)
+	{System.out.printf("%-"+len+"."+i+"s%"+len+"."+i+"s\n",str,str);
+	}
+	for(int i =1;i<=len; i++)
+	{System.out.printf("%-"+len+"."+i+"s%"+len+"."+i+"s\n",str,str);
+	}
+	
+	
+}
+	}
+-------------------------------------------------------------------
+accept students name and marks
+op-
+2 
+enter name - ****
+25 26 35 //marks
+enter name - ****
+25 26 35 //marks
+
+package arrays;
+import java.util.Scanner;
+public class dimdem {
+	public static void main (String [] args) {
+Scanner in = new Scanner(System.in);
+int size = in.nextInt();//array size
+String[] names = new String[size];// new array with size
+double[][] marks =  new double[size][];//only row dimension definition
+for (int index =0;index < size;index++) {
+	System.out.println("student name :");
+	names[index]=in.nextLine();
+	names[index]=in.nextLine();
+	marks[index]= new double[3];
+	for (int i=0;i<3;i++) {
+		marks[index][i]=in.nextDouble();
+		
+		
+	}
+}
+System.out.println("********************************************");
+System.out.println("student name   mark1 mark2 mark3  avg");
+System.out.println("********************************************");
+for (int index = 0;index<size;index++) {
+	double avg =(marks[index][0]+marks[index][1]+marks[index][2])/3;
+	System.out.printf("%-15s %5.2f %5.2f %5.2f %5.2f\n",names[index],marks[index][0],marks[index][1],marks[index][2],avg);//-15 for left alignment
+}
+System.out.println("********************************************");
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
+accept students name and marks
+op-
+2 
+enter name - ****
+25 26 35 //marks
+enter name - ****
+25 26 35 //marks
+
+package arrays;
+import java.util.Scanner;
+public class dimdem {
+	public static void main (String [] args) {
+Scanner in = new Scanner(System.in);
+int size = in.nextInt();//array size
+String[] names = new String[size];// new array with size
+double[][] marks =  new double[size][];//only row dimension definition
+for (int index =0;index < size;index++) {
+	System.out.println("student name :");
+	names[index]=in.nextLine();
+	names[index]=in.nextLine();
+	marks[index]= new double[3];
+	for (int i=0;i<3;i++) {
+		marks[index][i]=in.nextDouble();
+		
+		
+	}
+}
+System.out.println("********************************************");
+System.out.println("student name   mark1 mark2 mark3  avg");
+System.out.println("********************************************");
+for (int index = 0;index<size;index++) {
+	double avg =(marks[index][0]+marks[index][1]+marks[index][2])/3;
+	System.out.printf("%-15s %5.2f %5.2f %5.2f %5.2f\n",names[index],marks[index][0],marks[index][1],marks[index][2],avg);//-15 for left alignment
+}
+System.out.println("********************************************");
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
